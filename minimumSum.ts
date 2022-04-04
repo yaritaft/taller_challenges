@@ -33,10 +33,9 @@ function calculateEverySum(
   if (!list.length) {
     return;
   }
-  for (const value of list) {
+  for (const [index, value] of Object.entries(list)) {
     const copyList = [...list];
-    const indexElement = copyList.indexOf(value);
-    copyList.splice(indexElement, 1);
+    copyList.splice(Number(index), 1);
     results.push(value + acum);
     calculateEverySum(copyList, value + acum, results);
   }
