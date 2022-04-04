@@ -1,5 +1,15 @@
 # Challenge Java Script
 
+
+## Table of contents
+
+- [Challenges](#Challenges)
+- [Solutions](#Solutions)
+- [PreRequisites](#Pre-requisites)
+- [Run Challenges Tests](#Run-challenges-tests)
+
+# Challenges
+
 ## 1 - Non-Constructible Change
 
 Given an array of positive integers representing the values of coins in your possession, write a function that returns the minimum amount of change (the minimum sum of money) that you CANNOT create. The given coins can have
@@ -115,7 +125,7 @@ Write a function that takes in a non-empty array of integers that are sorted in 
     [0, 25, 25, 100, 100]
 ```
 
-# Solution
+# Solutions
 
 ## Pre-requisites
 
