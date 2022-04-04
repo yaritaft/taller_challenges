@@ -1,11 +1,7 @@
-const isNextNumberTheFollowingNumber = (
-  results: number[],
-  index: number,
-  value: number
-): boolean => results[index + 1] === value + 1;
+const isNextNumberTheFollowingNumber = (results: number[], index: number, value: number): boolean =>
+  results[index + 1] === value + 1;
 
-const isLastResult = (results: number[], index: number): boolean =>
-  results.length === index + 1;
+const isLastResult = (results: number[], index: number): boolean => results.length === index + 1;
 
 const sortingCriteriaCoinsResults = (a: number, b: number) => a - b;
 
@@ -13,21 +9,14 @@ const zeroCoinsFound = () => -1;
 
 const findMinimumSum = (results: number[]): number => {
   for (let i = 0; i < results.length; i++) {
-    if (
-      !isNextNumberTheFollowingNumber(results, i, results[i]) ||
-      isLastResult(results, i)
-    ) {
+    if (!isNextNumberTheFollowingNumber(results, i, results[i]) || isLastResult(results, i)) {
       return results[i] + 1;
     }
   }
   return zeroCoinsFound();
 };
 
-function calculateEverySum(
-  list: (number | null)[],
-  acum: number,
-  results: number[]
-): void {
+function calculateEverySum(list: (number | null)[], acum: number, results: number[]): void {
   for (const [index, value] of Object.entries(list)) {
     const copyList = [...list];
     copyList[Number(index)] = null;
