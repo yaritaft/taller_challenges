@@ -26,7 +26,7 @@ const findMinimumSum = (results: number[]): number => {
 };
 
 function calculateEverySum(
-  list: number[],
+  list: (number | null)[],
   acum: number,
   results: number[]
 ): void {
@@ -35,9 +35,11 @@ function calculateEverySum(
   }
   for (const [index, value] of Object.entries(list)) {
     const copyList = [...list];
-    copyList.splice(Number(index), 1);
-    results.push(value + acum);
-    calculateEverySum(copyList, value + acum, results);
+    copyList[Number(index)] = null;
+    if (value !== null) {
+      results.push(value + acum);
+      calculateEverySum(copyList, value + acum, results);
+    }
   }
 }
 
