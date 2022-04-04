@@ -30,9 +30,6 @@ function calculateEverySum(
   acum: number,
   results: number[]
 ): void {
-  if (!list.length) {
-    return;
-  }
   for (const [index, value] of Object.entries(list)) {
     const copyList = [...list];
     copyList[Number(index)] = null;
