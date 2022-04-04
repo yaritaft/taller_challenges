@@ -43,9 +43,9 @@ function calculateEverySum(
   }
 }
 
-export const minimumSum = (lista: number[]): number => {
+export const minimumSum = (list: number[]): number => {
   const results: number[] = [];
-  calculateEverySum(lista, 0, results);
+  calculateEverySum(list, 0, results);
   const nonRepeated = new Set(results);
   const sorted = [...nonRepeated].sort(sortingCriteriaCoinsResults);
   const maxNonAchievableSum = findMinimumSum(sorted);
