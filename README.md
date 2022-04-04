@@ -1,6 +1,4 @@
-Challenge
-
-# Java Script
+# Challenge Java Script
 
 ## 1 - Non-Constructible Change
 
@@ -118,3 +116,29 @@ Write a function that takes in a non-empty array of integers that are sorted in 
 ```
 
 # Solution
+
+## Pre-requisites
+
+- Docker and docker compose installed and working without sudo.
+- Linux/Mac terminal (Or emulated linux on Windows)
+
+## Run Challenges tests
+
+```
+chmod 711 ./up.sh && ./up.sh
+```
+
+## Dependencies
+
+Typescript
+Ts Node
+Jest
+
+## Solution 1
+
+DFS was used to explore every single combination for each number. After that every sum is calculated. Then repetitions are removed. After, they are sorted. Finally, the next consecutive number is searched among the results.
+
+## Solution 2
+
+A very simple map is applied to the list. Then the list is sorted.
+As discussed in the interview the solution is provided with built in features. Although it is not the best performance achievable.

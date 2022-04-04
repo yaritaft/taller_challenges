@@ -9,7 +9,7 @@ const isLastResult = (results: number[], index: number): boolean =>
 
 const sortingCriteriaCoinsResults = (a: number, b: number) => a - b;
 
-const zeroCoinsIntroduced = (results: number[]) => results.length === 0;
+const zeroCoinsFound = () => -1;
 
 const findMinimumSum = (results: number[]): number => {
   for (let i = 0; i < results.length; i++) {
@@ -22,8 +22,7 @@ const findMinimumSum = (results: number[]): number => {
       return results[i] + 1;
     }
   }
-  // zeroCoinsIntroduced
-  return -1;
+  return zeroCoinsFound();
 };
 
 function calculateEverySum(
@@ -48,6 +47,6 @@ export const minimumSum = (lista: number[]): number => {
   calculateEverySum(lista, 0, results);
   const nonRepeated = new Set(results);
   const sorted = [...nonRepeated].sort(sortingCriteriaCoinsResults);
-  const maxNonAchivableSum = findMinimumSum(sorted);
-  return maxNonAchivableSum;
+  const maxNonAchievableSum = findMinimumSum(sorted);
+  return maxNonAchievableSum;
 };

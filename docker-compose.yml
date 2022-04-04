@@ -2,7 +2,5 @@ version: "3.3"
 
 services:
   node:
-    image: node:14.5.0-alpine
+    build: .
     restart: unless-stopped
-    command: >
-      sh -c "npm test"

@@ -6,5 +6,3 @@ export const powerOfTwoInAscendingOrder = (numbers: number[]): number[] => {
     .sort(sortingCriteriaAscendingNumbers);
   return calculatedNumbers;
 };
-
-console.log(powerOfTwoInAscendingOrder([1, 2, 3, 5]));
