@@ -17,8 +17,6 @@ const findMinimumSum = (results: number[]): number => {
       !isNextNumberTheFollowingNumber(results, i, results[i]) ||
       isLastResult(results, i)
     ) {
-      console.log(results[i] + 1);
-      console.log(results);
       return results[i] + 1;
     }
   }
