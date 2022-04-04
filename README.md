@@ -130,9 +130,9 @@ chmod 711 ./up.sh && ./up.sh
 
 ## Dependencies
 
-Typescript
-Ts Node
-Jest
+- Typescript
+- Ts Node
+- Jest
 
 ## Solution 1
 
