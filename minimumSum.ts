@@ -8,7 +8,8 @@ const sortingCriteriaCoinsResults = (a: number, b: number) => a - b;
 const zeroCoinsFound = () => -1;
 
 const findMinimumSum = (results: number[]): number => {
-  for (let i = 0; i < results.length; i++) {
+  for (const index of Object.keys(results)) {
+    const i = Number(index);
     if (!isNextNumberTheFollowingNumber(results, i, results[i]) || isLastResult(results, i)) {
       return results[i] + 1;
     }
@@ -17,14 +18,14 @@ const findMinimumSum = (results: number[]): number => {
 };
 
 function calculateEverySum(list: (number | null)[], acum: number, results: number[]): void {
-  for (const [index, value] of Object.entries(list)) {
+  list.forEach((value, index) => {
     const copyList = [...list];
     copyList[Number(index)] = null;
     if (value !== null) {
       results.push(value + acum);
       calculateEverySum(copyList, value + acum, results);
     }
-  }
+  });
 }
 
 export const minimumSum = (list: number[]): number => {
